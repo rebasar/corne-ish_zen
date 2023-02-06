@@ -33,6 +33,7 @@
             bindings = <&kp>, <&kp>;
         };
     };
+};
 
 / {
         keymap {
