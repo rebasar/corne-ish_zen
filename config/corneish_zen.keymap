@@ -32,10 +32,10 @@
 // |  -   |  ;  |  Q  |  J  |  K  |  X  |   |  B  |  M   |  W  |  V  |  Z  |  \   |
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = <
-   &kp GRAVE &kp SQT  &kp COMMA &kp DOT &kp P    &kp Y   &kp F           &kp G     &kp C    &kp R   &kp L  &kp FSLH
-   &kp ESC   HRML(A,      O,        E,      U)   &kp I   &kp D           HRMR(H,       T,       N,      S) &kp EQUAL
-   &kp MINUS &kp SEMI &kp Q     &kp J   &kp K    &kp X   &kp B           &kp M     &kp W    &kp V   &kp Z  &kp BSLH
-                                        &kp DEL  &kp SPACE  &lt BSPC 2   &lt ENT 1 &kp TAB  &kp INS
+   &kp GRAVE &kp SQT  &kp COMMA &kp DOT &kp P    &kp Y   &kp F           &kp G       &kp C    &kp R   &kp L  &kp FSLH
+   &kp ESC   HRML(A,      O,        E,      U)   &kp I   &kp D           HRMR(H,         T,       N,      S) &kp EQUAL
+   &kp MINUS &kp SEMI &kp Q     &kp J   &kp K    &kp X   &kp B           &kp M       &kp W    &kp V   &kp Z  &kp BSLH
+                                        &kp DEL  &kp SPACE  &lt 2 BSPC   &lt 1 ENTER &kp TAB  &kp INS
                         >;
                 };
                 lower_layer {
