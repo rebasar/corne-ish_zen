@@ -11,6 +11,9 @@
 
 #define HRML(k1,k2,k3,k4) &ht LCTRL k1  &ht LSHFT k2  &ht LALT k3  &ht LGUI k4
 #define HRMR(k1,k2,k3,k4) &ht RGUI k1  &ht RALT k2  &ht RSHFT k3  &ht RCTRL k4
+#define SV_OE RA(P)
+#define SV_AE RA(Q)
+#define SV_OA RA(W)
 
 
 / {
@@ -18,10 +21,8 @@
     zmk,matrix_transform = &default_transform;
     //zmk,matrix_transform = &five_column_transform;
   };
-};
 
-/ {
-    behaviors {
+  behaviors {
         ht: hold_tap {
             label = "hold_tap";
             compatible = "zmk,behavior-hold-tap";
@@ -33,14 +34,11 @@
             bindings = <&kp>, <&kp>;
         };
     };
-};
+  keymap {
+        compatible = "zmk,keymap";
 
-/ {
-        keymap {
-                compatible = "zmk,keymap";
-
-                default_layer {
-                        label = "DVORAK";
+        default_layer {
+                label = "DVORAK";
 // -----------------------------------------------------------------------------------------
 // |  `   |  '  |  ,  |  .  |  P  |  Y  |   |  F  |  G   |  C  |  R  |  L  |  /   |
 // | ESC  |  A  |  O  |  E  |  U  |  I  |   |  D  |  H   |  T  |  N  |  S  |  =   |
@@ -51,10 +49,10 @@
    &kp ESC   HRML(A,      O,        E,      U)   &kp I   &kp D           HRMR(H,         T,       N,      S) &kp EQUAL
    &kp MINUS &kp SEMI &kp Q     &kp J   &kp K    &kp X   &kp B           &kp M       &kp W    &kp V   &kp Z  &kp BSLH
                                         &kp DEL  &kp SPACE  &lt 2 BSPC   &lt 1 ENTER &kp TAB  &kp INS
-                        >;
-                };
-                lower_layer {
-                        label = "N & FN";
+                >;
+        };
+        lower_layer {
+                label = "N & FN";
 // -----------------------------------------------------------------------------------------
 // | F11  |  F1 | F2  | F3  | F4  | F5  |   | F6  | F7  | F8  | F9  | F10 | F12  |
 // |      |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |      |
@@ -64,22 +62,22 @@
    &kp F11   &kp F1       &kp F2       &kp F3       &kp F4       &kp F5         &kp F6   &kp F7   &kp F8 &kp F9    &kp F10 &kp F12
    &trans    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0  &trans
    &trans    &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans  &trans
-                          	       &kp LGUI     &trans       &kp SPACE      &kp RET  &trans   &kp RALT
-                        >;
-                };
+                          	       &trans       &trans       &trans         &trans   &trans   &trans
+                >;
+        };
 
-                raise_layer {
-                        label = "NAVIG8";
+        raise_layer {
+                label = "NAVIG8";
 // -----------------------------------------------------------------------------------------
-// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-// | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-// | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
+// |      |     |  Ä  |  Å  |  Ö  |  [  |   |  ]  | HOME| PGUP| PGDN| END |      |
+// |      |     |     |     |     |  (  |   |  )  | LEFT|  UP | DOWN|RIGHT|      |
+// |      |     |     |     |     |  {  |   |  }  |     |     |     |     |      |
+//                    |     |     |     |   |     |     |     |
                         bindings = <
-   &kp  TAB  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
-   &kp LCTRL &trans   &trans &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
-   &kp LSHFT &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
-                    	     &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
+   &trans    &trans     &kp SV_AE  &kp SV_OA   &kp SV_OE &kp LBKT    &kp RBKT    &kp HOME  &kp PG_UP &kp PG_DN &kp END   &trans
+   &trans    &trans     &trans     &trans      &trans    &kp LPAR    &kp RPAR    &kp LARW  &kp UARW  &kp DARW  &kp RARW  &trans
+   &trans    &trans     &trans     &trans      &trans    &kp LBRC    &kp RBRC    &trans    &trans    &trans    &trans   &trans
+                    	           &trans      &trans    &trans      &trans      &trans    &trans
                         >;
                 };
         };
