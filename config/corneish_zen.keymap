@@ -14,6 +14,7 @@
 #define SV_OE RA(P)
 #define SV_AE RA(Q)
 #define SV_OA RA(W)
+#define K_FWD K_FORWARD
 
 
 / {
@@ -70,12 +71,12 @@
                 label = "NAVIG8";
 // -----------------------------------------------------------------------------------------
 // |      |     |  Ä  |  Å  |  Ö  |  [  |   |  ]  | HOME| PGUP| PGDN| END |      |
-// |      |     |     |     |     |  (  |   |  )  | LEFT|  UP | DOWN|RIGHT|      |
+// |      | BACK|     |     | FWD |  (  |   |  )  | LEFT|  UP | DOWN|RIGHT|      |
 // |      |     |     |     |     |  {  |   |  }  |     |     |     |     |      |
 //                    |     |     |     |   |     |     |     |
                         bindings = <
    &trans         &trans     &kp SV_AE  &kp SV_OA   &kp SV_OE &kp LBKT    &kp RBKT    &kp HOME  &kp PG_UP &kp PG_DN &kp END   &trans
-   &trans         &trans     &trans     &trans      &trans    &kp LPAR    &kp RPAR    &kp LARW  &kp UARW  &kp DARW  &kp RARW  &trans
+   &trans         &kp K_BACK &trans     &trans      &kp K_FWD &kp LPAR    &kp RPAR    &kp LARW  &kp UARW  &kp DARW  &kp RARW  &trans
    &bootloader    &trans     &trans     &trans      &trans    &kp LBRC    &kp RBRC    &trans    &trans    &trans    &trans    &bootloader
                     	           &trans      &trans    &trans      &trans      &trans    &trans
                         >;
