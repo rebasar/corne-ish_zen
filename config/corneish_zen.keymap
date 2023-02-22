@@ -74,9 +74,9 @@
 // |      |     |     |     |     |  {  |   |  }  |     |     |     |     |      |
 //                    |     |     |     |   |     |     |     |
                         bindings = <
-   &trans    &trans     &kp SV_AE  &kp SV_OA   &kp SV_OE &kp LBKT    &kp RBKT    &kp HOME  &kp PG_UP &kp PG_DN &kp END   &trans
-   &trans    &trans     &trans     &trans      &trans    &kp LPAR    &kp RPAR    &kp LARW  &kp UARW  &kp DARW  &kp RARW  &trans
-   &trans    &trans     &trans     &trans      &trans    &kp LBRC    &kp RBRC    &trans    &trans    &trans    &trans   &trans
+   &trans         &trans     &kp SV_AE  &kp SV_OA   &kp SV_OE &kp LBKT    &kp RBKT    &kp HOME  &kp PG_UP &kp PG_DN &kp END   &trans
+   &trans         &trans     &trans     &trans      &trans    &kp LPAR    &kp RPAR    &kp LARW  &kp UARW  &kp DARW  &kp RARW  &trans
+   &bootloader    &trans     &trans     &trans      &trans    &kp LBRC    &kp RBRC    &trans    &trans    &trans    &trans    &bootloader
                     	           &trans      &trans    &trans      &trans      &trans    &trans
                         >;
                 };
