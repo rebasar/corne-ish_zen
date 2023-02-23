@@ -63,7 +63,7 @@
    &kp F11   &kp F1       &kp F2       &kp F3       &kp F4       &kp F5         &kp F6   &kp F7   &kp F8 &kp F9    &kp F10 &kp F12
    &trans    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0  &trans
    &trans    &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans  &trans
-                          	       &trans       &trans       &trans         &trans   &trans   &trans
+                          	       &trans       &kp K_APP    &trans         &trans   &trans   &trans
                 >;
         };
 
@@ -78,7 +78,7 @@
    &trans         &trans     &kp SV_AE  &kp SV_OA   &kp SV_OE &kp LBKT    &kp RBKT    &kp HOME  &kp PG_UP &kp PG_DN &kp END   &trans
    &trans         &kp K_BACK &trans     &trans      &kp K_FWD &kp LPAR    &kp RPAR    &kp LARW  &kp UARW  &kp DARW  &kp RARW  &kp MINUS
    &bootloader    &trans     &trans     &trans      &trans    &kp LBRC    &kp RBRC    &trans    &trans    &trans    &trans    &bootloader
-                    	                &trans      &trans    &trans      &trans      &trans    &trans
+                    	                &trans      &trans    &trans      &trans      &kp K_APP &trans
                         >;
                 };
         };
