@@ -8,6 +8,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
 
 #define HRML(k1,k2,k3,k4) &ht LCTRL k1  &ht LSHFT k2  &ht LALT k3  &ht LGUI k4
 #define HRMR(k1,k2,k3,k4) &ht RGUI k1  &ht RALT k2  &ht RSHFT k3  &ht RCTRL k4
@@ -76,7 +77,7 @@
 //                    |     |     |     |   |     |     |     |
                         bindings = <
    &bt BT_CLR     &trans     &kp SV_AE  &kp SV_OA   &kp SV_OE &kp LBKT    &kp RBKT    &kp HOME  &kp PG_UP &kp PG_DN &kp END   &trans
-   &trans         &kp K_BACK &kp MINUS  &kp EQUAL   &kp K_FWD &kp LPAR    &kp RPAR    &kp LARW  &kp UARW  &kp DARW  &kp RARW  &kp MINUS
+   &out OUT_TOG   &kp K_BACK &kp MINUS  &kp EQUAL   &kp K_FWD &kp LPAR    &kp RPAR    &kp LARW  &kp UARW  &kp DARW  &kp RARW  &kp MINUS
    &bootloader    &trans     &trans     &trans      &trans    &kp LBRC    &kp RBRC    &trans    &trans    &trans    &trans    &bootloader
                     	                &trans      &trans    &trans      &trans      &kp K_APP &trans
                         >;
