@@ -77,7 +77,7 @@
 //                    |     |     |     |   |     |     |     |
                         bindings = <
    &bt BT_CLR     &trans     &kp SV_AE  &kp SV_OA   &kp SV_OE &kp LBKT    &kp RBKT    &kp HOME  &kp PG_UP &kp PG_DN &kp END   &trans
-   &out OUT_TOG   &kp K_BACK &kp MINUS  &kp EQUAL   &kp K_FWD &kp LPAR    &kp RPAR    &kp LARW  &kp UARW  &kp DARW  &kp RARW  &kp MINUS
+   &out OUT_BLE   &kp K_BACK &kp MINUS  &kp EQUAL   &kp K_FWD &kp LPAR    &kp RPAR    &kp LARW  &kp UARW  &kp DARW  &kp RARW  &kp MINUS
    &bootloader    &trans     &trans     &trans      &trans    &kp LBRC    &kp RBRC    &trans    &trans    &trans    &trans    &bootloader
                     	                &trans      &trans    &trans      &trans      &kp K_APP &trans
                         >;
