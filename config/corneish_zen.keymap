@@ -16,6 +16,8 @@
 #define SV_AE RA(Q)
 #define SV_OA RA(W)
 #define K_FWD K_FORWARD
+#define BT_0 BT_SEL 0
+#define BT_1 BT_SEL 1
 
 
 / {
@@ -78,7 +80,7 @@
                         bindings = <
    &bt BT_CLR     &trans     &kp SV_AE  &kp SV_OA   &kp SV_OE &kp LBKT    &kp RBKT    &kp HOME  &kp PG_UP &kp PG_DN &kp END   &trans
    &out OUT_BLE   &kp K_BACK &kp MINUS  &kp EQUAL   &kp K_FWD &kp LPAR    &kp RPAR    &kp LARW  &kp UARW  &kp DARW  &kp RARW  &kp MINUS
-   &bootloader    &trans     &trans     &trans      &trans    &kp LBRC    &kp RBRC    &trans    &trans    &trans    &trans    &bootloader
+   &bootloader    &trans     &bt BT_0   &bt BT_1    &trans    &kp LBRC    &kp RBRC    &trans    &trans    &trans    &trans    &bootloader
                     	                &trans      &trans    &trans      &trans      &kp K_APP &trans
                         >;
                 };
